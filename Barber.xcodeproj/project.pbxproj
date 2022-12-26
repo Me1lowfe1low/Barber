@@ -11,6 +11,15 @@
 		51F4FE482956FCC600721765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE472956FCC600721765 /* ContentView.swift */; };
 		51F4FE4A2956FCCF00721765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F4FE492956FCCF00721765 /* Assets.xcassets */; };
 		51F4FE4D2956FCCF00721765 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F4FE4C2956FCCF00721765 /* Preview Assets.xcassets */; };
+		51F4FE54295703D400721765 /* Eployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE53295703D400721765 /* Eployee.swift */; };
+		51F4FE562957046400721765 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE552957046400721765 /* Position.swift */; };
+		51F4FE582957069600721765 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE572957069600721765 /* CalendarView.swift */; };
+		51F4FE5A295706F100721765 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE59295706F100721765 /* Event.swift */; };
+		51F4FE5E2957220E00721765 /* CalendarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */; };
+		51F4FE622957280400721765 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE612957280400721765 /* DateFunctions.swift */; };
+		51F4FE642958954500721765 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE632958954500721765 /* DateValue.swift */; };
+		51F4FE682958D35C00721765 /* CalendarViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE672958D35C00721765 /* CalendarViewExtension.swift */; };
+		51F4FE6A2959B31B00721765 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE692959B31B00721765 /* DateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		51F4FE472956FCC600721765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		51F4FE492956FCCF00721765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51F4FE4C2956FCCF00721765 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51F4FE53295703D400721765 /* Eployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eployee.swift; sourceTree = "<group>"; };
+		51F4FE552957046400721765 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		51F4FE572957069600721765 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		51F4FE59295706F100721765 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperView.swift; sourceTree = "<group>"; };
+		51F4FE612957280400721765 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
+		51F4FE632958954500721765 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		51F4FE672958D35C00721765 /* CalendarViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewExtension.swift; sourceTree = "<group>"; };
+		51F4FE692959B31B00721765 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,8 @@
 			children = (
 				51F4FE452956FCC600721765 /* BarberApp.swift */,
 				51F4FE472956FCC600721765 /* ContentView.swift */,
+				51F4FE5C2957209700721765 /* View */,
+				51F4FE5B2957208D00721765 /* Model */,
 				51F4FE492956FCCF00721765 /* Assets.xcassets */,
 				51F4FE4B2956FCCF00721765 /* Preview Content */,
 			);
@@ -65,6 +85,29 @@
 				51F4FE4C2956FCCF00721765 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51F4FE5B2957208D00721765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51F4FE672958D35C00721765 /* CalendarViewExtension.swift */,
+				51F4FE632958954500721765 /* DateValue.swift */,
+				51F4FE59295706F100721765 /* Event.swift */,
+				51F4FE612957280400721765 /* DateFunctions.swift */,
+				51F4FE53295703D400721765 /* Eployee.swift */,
+				51F4FE552957046400721765 /* Position.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51F4FE5C2957209700721765 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */,
+				51F4FE572957069600721765 /* CalendarView.swift */,
+				51F4FE692959B31B00721765 /* DateView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F4FE682958D35C00721765 /* CalendarViewExtension.swift in Sources */,
+				51F4FE582957069600721765 /* CalendarView.swift in Sources */,
 				51F4FE482956FCC600721765 /* ContentView.swift in Sources */,
+				51F4FE6A2959B31B00721765 /* DateView.swift in Sources */,
 				51F4FE462956FCC600721765 /* BarberApp.swift in Sources */,
+				51F4FE562957046400721765 /* Position.swift in Sources */,
+				51F4FE5A295706F100721765 /* Event.swift in Sources */,
+				51F4FE622957280400721765 /* DateFunctions.swift in Sources */,
+				51F4FE642958954500721765 /* DateValue.swift in Sources */,
+				51F4FE54295703D400721765 /* Eployee.swift in Sources */,
+				51F4FE5E2957220E00721765 /* CalendarWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
