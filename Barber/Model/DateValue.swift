@@ -11,4 +11,6 @@ struct DateValue: Identifiable {
     let id = UUID()
     let day: Int
     let date: Date
+    let assigned: Bool = false
 }
+

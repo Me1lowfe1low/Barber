@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CalendarView: View {
     @Binding var currentDate: Date
-    @State var testCalendar = Calendar.current
-    
-    //Change month
+    @State var chosenDate: Date = Date()
     @State var currentMonth: Int = 0
+    private let adaptiveColumns = [ GridItem(.adaptive(minimum: 160))]
+    
     
     var body: some View {
         VStack(spacing: 20) {
@@ -55,14 +55,31 @@ struct CalendarView: View {
                 }
             }
             .padding(.horizontal)
-            let columns = Array(repeating: GridItem(.flexible()), count: 7)
             
+            let columns = Array(repeating: GridItem(.flexible()), count: 7)
             LazyVGrid(columns: columns, spacing: 15) {
                 ForEach(extractDate()) { value in
                     DateView(value: value)
+                        .onTapGesture {
+                            chosenDate = value.date
+                        }
+                }
+                .padding(.vertical, 5)
+            }
+            
+            Divider()
+            let hours = extractHour(currentDate: chosenDate)
+            LazyVGrid(columns: adaptiveColumns, spacing: 2 ) {
+                ForEach(hours) { hour in
+                    ZStack {
+                        if hour.hour > 7 && hour.hour < 18 {
+                            HourView(value: hour)
+                        }
+                    }
                 }
             }
         }
+        .padding(.horizontal, 20)
         .onChange(of: currentMonth) { newValue in
             currentDate = getCurrentMonth()
         }

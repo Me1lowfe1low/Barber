@@ -5,6 +5,7 @@
 //  Created by Дмитрий Гордиенко on 25.12.2022.
 //
 
+import SwiftUI;
 import Foundation
 
 extension CalendarView {
@@ -40,6 +41,23 @@ extension CalendarView {
         for _ in 0..<dayOffset-1 {
             days.insert(DateValue(day: 0, date: Date()), at: 0)
         }
+        
         return days
+    }
+    
+    func extractHour(currentDate: Date) -> [TimeValue] {
+        let calendar = Calendar.current
+        let hours = currentDate.getAllHours().compactMap { date -> TimeValue in
+            let hour = calendar.component(.hour, from: date)
+            return TimeValue(hour: hour, time: date)
+        }
+        return hours
+    }
+}
+
+
+struct CalendarViewExtension_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

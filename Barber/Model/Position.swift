@@ -7,6 +7,16 @@
 
 import Foundation
 
-enum Position {
-    case barber, barberApprentice, barberInstructor, barberSHopOperator, barberStylist, Cosmetologist, hairCutter,hairStylist, masterBarber, salonManager, stylist
+enum Position: String {
+    case barber = "Barber"
+    case barberApprentice = "Barber Apprentice"
+    case barberInstructor = "Barber Instructor"
+    case barberShopOperator = "Barber Shop Operator"
+    case barberStylist = "Barber Stylist"
+    case cosmetologist = "Cosmetologist"
+    case hairCutter = "Hair Cutter"
+    case hairStylist = "Hair Stylist"
+    case masterBarber = "Master Barber"
+    case salonManager = "Salon Manager"
+    case stylist = "Stylist"
 }
