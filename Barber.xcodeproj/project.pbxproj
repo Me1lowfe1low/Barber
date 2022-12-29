@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51A6AFAF295CD74D00E95D83 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFAE295CD74D00E95D83 /* NewsView.swift */; };
+		51A6AFB1295CD75C00E95D83 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB0295CD75C00E95D83 /* NewsModel.swift */; };
+		51A6AFB3295DAAC600E95D83 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB2295DAAC600E95D83 /* CellView.swift */; };
+		51A6AFB5295DB51700E95D83 /* ClientAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB4295DB51700E95D83 /* ClientAccountView.swift */; };
+		51A6AFB7295DB54600E95D83 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB6295DB54600E95D83 /* Client.swift */; };
+		51A6AFB9295DC7A500E95D83 /* RegistrationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */; };
+		51A6AFBB295DC7FF00E95D83 /* ClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */; };
 		51F4FE462956FCC600721765 /* BarberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE452956FCC600721765 /* BarberApp.swift */; };
 		51F4FE482956FCC600721765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE472956FCC600721765 /* ContentView.swift */; };
 		51F4FE4A2956FCCF00721765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F4FE492956FCCF00721765 /* Assets.xcassets */; };
@@ -29,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51A6AFAE295CD74D00E95D83 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		51A6AFB0295CD75C00E95D83 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		51A6AFB2295DAAC600E95D83 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		51A6AFB4295DB51700E95D83 /* ClientAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAccountView.swift; sourceTree = "<group>"; };
+		51A6AFB6295DB54600E95D83 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationWindow.swift; sourceTree = "<group>"; };
+		51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCreator.swift; sourceTree = "<group>"; };
 		51F4FE422956FCC600721765 /* Barber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F4FE452956FCC600721765 /* BarberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberApp.swift; sourceTree = "<group>"; };
 		51F4FE472956FCC600721765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +116,9 @@
 		51F4FE5B2957208D00721765 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */,
+				51A6AFB6295DB54600E95D83 /* Client.swift */,
+				51A6AFB0295CD75C00E95D83 /* NewsModel.swift */,
 				51F4FE7B295C1F0000721765 /* InfoModel.swift */,
 				51F4FE672958D35C00721765 /* CalendarViewExtension.swift */,
 				51F4FE612957280400721765 /* DateFunctions.swift */,
@@ -117,6 +134,9 @@
 		51F4FE5C2957209700721765 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */,
+				51A6AFB4295DB51700E95D83 /* ClientAccountView.swift */,
+				51A6AFB2295DAAC600E95D83 /* CellView.swift */,
 				51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */,
 				51F4FE572957069600721765 /* CalendarView.swift */,
 				51F4FE75295B803800721765 /* EmployeeView.swift */,
@@ -124,6 +144,7 @@
 				51F4FE79295C1EEF00721765 /* InfoView.swift */,
 				51F4FE692959B31B00721765 /* DateView.swift */,
 				51F4FE6B2959E38500721765 /* HourView.swift */,
+				51A6AFAE295CD74D00E95D83 /* NewsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,19 +222,26 @@
 				51F4FE7A295C1EF000721765 /* InfoView.swift in Sources */,
 				51F4FE682958D35C00721765 /* CalendarViewExtension.swift in Sources */,
 				51F4FE582957069600721765 /* CalendarView.swift in Sources */,
+				51A6AFAF295CD74D00E95D83 /* NewsView.swift in Sources */,
 				51F4FE78295B876300721765 /* EmployeesView.swift in Sources */,
+				51A6AFBB295DC7FF00E95D83 /* ClientCreator.swift in Sources */,
 				51F4FE76295B803800721765 /* EmployeeView.swift in Sources */,
 				51F4FE6C2959E38500721765 /* HourView.swift in Sources */,
 				51F4FE482956FCC600721765 /* ContentView.swift in Sources */,
+				51A6AFB1295CD75C00E95D83 /* NewsModel.swift in Sources */,
 				51F4FE6E295A3BA200721765 /* TimeValue.swift in Sources */,
 				51F4FE6A2959B31B00721765 /* DateView.swift in Sources */,
+				51A6AFB7295DB54600E95D83 /* Client.swift in Sources */,
 				51F4FE462956FCC600721765 /* BarberApp.swift in Sources */,
 				51F4FE562957046400721765 /* Position.swift in Sources */,
 				51F4FE5A295706F100721765 /* Event.swift in Sources */,
 				51F4FE622957280400721765 /* DateFunctions.swift in Sources */,
 				51F4FE642958954500721765 /* DateValue.swift in Sources */,
+				51A6AFB5295DB51700E95D83 /* ClientAccountView.swift in Sources */,
+				51A6AFB3295DAAC600E95D83 /* CellView.swift in Sources */,
 				51F4FE7C295C1F0000721765 /* InfoModel.swift in Sources */,
 				51F4FE54295703D400721765 /* Employee.swift in Sources */,
+				51A6AFB9295DC7A500E95D83 /* RegistrationWindow.swift in Sources */,
 				51F4FE5E2957220E00721765 /* CalendarWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ struct HourView: View {
             value.assigned ? Text("Assigned") : Text("Free")
         }
         .padding()
-        .overlay(RoundedRectangle(cornerRadius: 20).fill(value.assigned ? .red : .blue).opacity(0.2))
+        .overlay(RoundedRectangle(cornerRadius: 20).fill(value.assigned ? LinearGradient(colors: [.orange,.red], startPoint: .topLeading, endPoint: .bottomTrailing): LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing)).opacity(0.4))
         .frame(maxWidth: .infinity)
     }
 }

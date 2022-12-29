@@ -29,6 +29,9 @@ struct InfoView: View {
                 Section(header: Text("Description")) {
                     Text(office.descritption)
                 }
+                Section(header: Text("Contact info")) {
+                    Text(office.contacts)
+                }
             }
         
         }
