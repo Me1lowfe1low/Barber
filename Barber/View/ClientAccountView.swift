@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClientAccountView: View {
-    var client: Client
+    var client: client
     @State var oldPassword: String = ""
     @State var newPassword1: String = ""
     @State var newPassword2: String = ""
@@ -76,6 +76,6 @@ struct ClientAccountView: View {
 
 struct PersonalAccout_Previews: PreviewProvider {
     static var previews: some View {
-        ClientAccountView(client: Client.clientSample)
+        ClientAccountView(client: client.clientSample)
     }
 }

@@ -12,10 +12,16 @@ struct NewsView: View {
     
     var body: some View {
         VStack {
-            Image(systemName:news.imageURL)
-                .resizable()
-                .scaledToFit()
+            ZStack {
+                RoundedRectangle(cornerRadius: 40).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+                Image(systemName:news.imageURL)
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .blendMode(.destinationOut)
+            }
             Text("\(news.description)")
+            
         }
         .padding()
     }

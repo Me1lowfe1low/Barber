@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegistrationWindow: View {
+    var client: client
     @State var clientFirstName: String = ""
     @State var clientMiddleName: String = ""
     @State var clientLastName: String = ""
@@ -58,9 +59,9 @@ struct RegistrationWindow: View {
         .padding()
     }
 }
-
+/*
 struct RegistrationWindow_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationWindow()
+       // RegistrationWindow()
     }
-}
+}*/

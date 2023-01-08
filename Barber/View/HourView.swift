@@ -11,15 +11,19 @@ struct HourView: View {
     var value: TimeValue
     
     var body: some View {
-        HStack {
-            Label("\(value.hour):00", systemImage: "clock")
-                .font(.caption)
-            Spacer()
-            value.assigned ? Text("Assigned") : Text("Free")
+        ZStack {
+            RoundedRectangle(cornerRadius: 20).fill(value.assigned ? LinearGradient(colors: [.orange,.red], startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+            HStack {
+                Label("\(value.hour):00", systemImage: "clock")
+                    .font(.caption)
+                
+                Spacer()
+                value.assigned ? Text("Assigned") : Text("Free")
+            }
+            .padding()
+            .blendMode(.destinationOut)
+            .frame(maxWidth: .infinity)
         }
-        .padding()
-        .overlay(RoundedRectangle(cornerRadius: 20).fill(value.assigned ? LinearGradient(colors: [.orange,.red], startPoint: .topLeading, endPoint: .bottomTrailing): LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing)).opacity(0.4))
-        .frame(maxWidth: .infinity)
     }
 }
 

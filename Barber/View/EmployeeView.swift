@@ -11,26 +11,31 @@ struct EmployeeView: View {
     var employee: Employee
     
     var body: some View {
-        HStack(alignment: .center) {
-            Image(systemName: employee.profileImage)
+        ZStack {
+            RoundedRectangle(cornerRadius: 20).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .padding(.horizontal)
+            HStack(alignment: .center) {
+                Image(systemName: employee.profileImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(Circle())
-            Divider()
-            VStack(alignment: .leading) {
-                Text("\(employee.firstName)")
-                Text("\(employee.secondName)")
-                Text("\(employee.lastName)")
                 Divider()
+                VStack(alignment: .leading) {
+                    Text("\(employee.firstName)")
+                    Text("\(employee.secondName)")
+                    Text("\(employee.lastName)")
+                    Divider()
                     //.frame(maxWidth: .infinity)
-                Text("\(employee.position.rawValue)")
-                    .font(.subheadline)
+                    Text("\(employee.position.rawValue)")
+                        .font(.subheadline)
+                }
+                .font(.title.bold())
             }
-            .font(.title.bold())
+            .padding()
+            .blendMode(.destinationOut)
+            //.overlay(RoundedRectangle(cornerRadius: 20).fill(.gray).opacity(0.9))
+            .frame(maxWidth: .infinity)
         }
-        .padding()
-        .overlay(RoundedRectangle(cornerRadius: 20).fill(.gray).opacity(0.1))
-        .frame(maxWidth: .infinity)
     }
 }
 

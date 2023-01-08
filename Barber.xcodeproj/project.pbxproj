@@ -76,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51A6AFBC295DE25500E95D83 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		51F4FE392956FCC600721765 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +105,7 @@
 			children = (
 				51F4FE452956FCC600721765 /* BarberApp.swift */,
 				51F4FE472956FCC600721765 /* ContentView.swift */,
+				51A6AFBC295DE25500E95D83 /* ViewModel */,
 				51F4FE5C2957209700721765 /* View */,
 				51F4FE5B2957208D00721765 /* Model */,
 				51F4FE492956FCCF00721765 /* Assets.xcassets */,
@@ -116,7 +125,6 @@
 		51F4FE5B2957208D00721765 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */,
 				51A6AFB6295DB54600E95D83 /* Client.swift */,
 				51A6AFB0295CD75C00E95D83 /* NewsModel.swift */,
 				51F4FE7B295C1F0000721765 /* InfoModel.swift */,
@@ -136,8 +144,8 @@
 			children = (
 				51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */,
 				51A6AFB4295DB51700E95D83 /* ClientAccountView.swift */,
-				51A6AFB2295DAAC600E95D83 /* CellView.swift */,
 				51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */,
+				51A6AFB2295DAAC600E95D83 /* CellView.swift */,
 				51F4FE572957069600721765 /* CalendarView.swift */,
 				51F4FE75295B803800721765 /* EmployeeView.swift */,
 				51F4FE77295B876300721765 /* EmployeesView.swift */,

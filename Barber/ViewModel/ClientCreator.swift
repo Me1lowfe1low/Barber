@@ -28,4 +28,8 @@ class client: Identifiable {
         self.phoneNumber = phoneNumber
         self.orderHistory = orderHistory
     }
+    
+    #if DEBUG
+    static let clientSample:  client = client(firstName: "Alex", middleName: "Albert", lastName: "Cheese", profileImage: "person.crop.circle.badge.questionmark.fill",birthDate: Date(timeIntervalSinceReferenceDate: -123456789.0),email: "dummymail@dummyhost.com", phoneNumber: "8912931XXXX", orderHistory: "None")
+    #endif
 }

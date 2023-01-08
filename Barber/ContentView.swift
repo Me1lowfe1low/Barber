@@ -11,59 +11,69 @@ struct ContentView: View {
     @State private var newsPageIndex = 0
     @State private var news: [NewsModel] = NewsModel.bunchOfNews
     @State var logginStatus: Bool = false
+    @State var client: Client? = nil
     
     var body: some View {
-        VStack {
-            TabView(selection: $newsPageIndex) {
-                ForEach(news) { news in
-                    VStack {
-                        NewsView(news: news)
+        NavigationView {
+            VStack {
+                //CalendarWrapperView()
+                TabView(selection: $newsPageIndex) {
+                    ForEach(news) { news in
+                        VStack {
+                            NewsView(news: news)
+                        }
+                        .tag(news.tag)
                     }
-                    .tag(news.tag)
                 }
-            }
-            .animation(.easeOut, value: newsPageIndex)
-            .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .interactive))
-            Divider()
-            HStack {
-                NavigationLink(destination: CalendarWrapperView())
-                {
-                    CellView(value:  "calendar")
+                .animation(.easeOut, value: newsPageIndex)
+                .tabViewStyle(.page)
+                .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+                Divider()
+                HStack {
+                    NavigationLink(destination: CalendarWrapperView())
+                    {
+                        CellView(value:  "calendar")
+                    }
+                    NavigationLink(destination: Text("Shop"))
+                    {
+                        CellView(value: "takeoutbag.and.cup.and.straw")
+                    }
                 }
-                NavigationLink(destination: Text("Shop"))
-                {
-                    CellView(value: "takeoutbag.and.cup.and.straw")
-                }
-            }
-            
-            HStack {
-                NavigationLink(destination: EmployeesView())
-                {
-                    CellView(value: "person.3")
-                }
-                NavigationLink(destination: InfoView())
-                {
-                    CellView(value: "info.square")
-                }
-            }
-        }
-        .padding()
-        .toolbar {
-            Menu(content: {
-                Button(action: {Text("Account")}, label: {Image(systemName: "person.crop.circle")})
                 
-            }, label: {
-                Image(systemName: "list.bullet")
-            })
+                HStack {
+                    NavigationLink(destination: EmployeesView())
+                    {
+                        CellView(value: "person.3")
+                    }
+                    NavigationLink(destination: InfoView())
+                    {
+                        CellView(value: "info.square")
+                    }
+                }
+            }
+            .padding()
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    //Menu( content: {
+                    NavigationLink(
+                        destination: Text("Hello"), //ClientAccountView(client: client),
+                        label: {
+                            Image(systemName: "person.crop.circle")
+                        })
+                }
+                //}, label: {
+                //    Image(systemName: "list.bullet")
+                //})
+                // }
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        //NavigationView {
             ContentView()
-        }
+        //}
     }
 }

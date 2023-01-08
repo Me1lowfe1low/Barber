@@ -13,10 +13,11 @@ struct CellView: View {
     var body: some View {
         VStack(alignment: .center){
             ZStack {
+                RoundedRectangle(cornerRadius: 40).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
                 Image(systemName: value)
                     .font(.title)
                     .padding()
-                RoundedRectangle(cornerRadius: 40).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing)).opacity(0.4)
+                    .blendMode(.destinationOut)
             }
         }
         .frame(width: 150, height: 150)

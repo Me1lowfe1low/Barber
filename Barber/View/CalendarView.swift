@@ -13,60 +13,19 @@ struct CalendarView: View {
     @State var currentMonth: Int = 0
     private let adaptiveColumns = [ GridItem(.adaptive(minimum: 160))]
     
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-YYYY"
+        return formatter
+    }
+    
     
     var body: some View {
         VStack(spacing: 20) {
-            //Days
-            let days: [String] = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
-            
-            HStack(spacing: 20) {
-                VStack(alignment: .leading,spacing: 10) {
-                    Text(getYearAndMonthInfo()[0])
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                    Text(getYearAndMonthInfo()[1])
-                        .font(.title2.bold())
-                }
-                Spacer()
-                Button {
-                    withAnimation {
-                        currentMonth -= 1
-                    }
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.title2)
-                }
-                Button {
-                    withAnimation {
-                        currentMonth += 1
-                    }
-                } label: {
-                    Image(systemName: "chevron.right")
-                        .font(.title2)
-                }
-            }
-            .padding(.horizontal)
-            HStack {
-                ForEach(days, id: \.self) { day in
-                    Text(day)
-                        .font(.callout)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity)
-                }
-            }
-            .padding(.horizontal)
-            
-            let columns = Array(repeating: GridItem(.flexible()), count: 7)
-            LazyVGrid(columns: columns, spacing: 15) {
-                ForEach(extractDate()) { value in
-                    DateView(value: value)
-                        .onTapGesture {
-                            chosenDate = value.date
-                        }
-                }
-                .padding(.vertical, 5)
-            }
-            
+            DatePicker("Date", selection: $chosenDate, displayedComponents: [.date])
+                .datePickerStyle(GraphicalDatePickerStyle())
+            Divider()
+            Text("Choosen date: "+dateFormatter.string(from: chosenDate))
             Divider()
             let hours = extractHour(currentDate: chosenDate)
             LazyVGrid(columns: adaptiveColumns, spacing: 2 ) {
@@ -92,3 +51,57 @@ struct CalendarView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+/*
+let days: [String] = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+
+HStack(spacing: 20) {
+    VStack(alignment: .leading,spacing: 10) {
+        Text(getYearAndMonthInfo()[0])
+            .font(.caption)
+            .fontWeight(.semibold)
+        Text(getYearAndMonthInfo()[1])
+            .font(.title2.bold())
+    }
+    Spacer()
+    Button {
+        withAnimation {
+            currentMonth -= 1
+        }
+    } label: {
+        Image(systemName: "chevron.left")
+            .font(.title2)
+    }
+    Button {
+        withAnimation {
+            currentMonth += 1
+        }
+    } label: {
+        Image(systemName: "chevron.right")
+            .font(.title2)
+    }
+}
+.padding(.horizontal)
+HStack {
+    ForEach(days, id: \.self) { day in
+        Text(day)
+            .font(.callout)
+            .fontWeight(.semibold)
+            .frame(maxWidth: .infinity)
+    }
+}
+.padding(.horizontal)
+
+let columns = Array(repeating: GridItem(.flexible()), count: 7)
+LazyVGrid(columns: columns, spacing: 15) {
+    ForEach(extractDate()) { value in
+        DateView(value: value)
+            .onTapGesture {
+                chosenDate = value.date
+            }
+    }
+    .padding(.vertical, 5)
+}
+*/
