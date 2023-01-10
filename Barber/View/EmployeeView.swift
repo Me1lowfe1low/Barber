@@ -11,31 +11,42 @@ struct EmployeeView: View {
     var employee: Employee
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .padding(.horizontal)
-            HStack(alignment: .center) {
-                Image(systemName: employee.profileImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(Circle())
-                Divider()
-                VStack(alignment: .leading) {
-                    Text("\(employee.firstName)")
-                    Text("\(employee.secondName)")
-                    Text("\(employee.lastName)")
+        GeometryReader { geometry in
+            let size: CGFloat = min (geometry.size.width,geometry.size.height)*0.6
+            ZStack {
+                RoundedRectangle(cornerRadius: 20).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .padding(.horizontal)
+                HStack(alignment: .center) {
+                    Image(systemName: employee.profileImage)
+                        .resizable()
+                        .interpolation(.none)
+                        .aspectRatio(1.0, contentMode: .fit)
+                        .frame(width: size, height: size)
+                        .clipShape(Circle())
+                        .overlay(Circle()
+                            .stroke(Color.black, lineWidth: 2))
+                        .padding()
+                        .shadow(radius: 10)
                     Divider()
-                    //.frame(maxWidth: .infinity)
-                    Text("\(employee.position.rawValue)")
-                        .font(.subheadline)
+                    VStack(alignment: .leading) {
+                        Text("\(employee.firstName)")
+                        Text("\(employee.secondName)")
+                        Text("\(employee.lastName)")
+                        Divider()
+                        //.frame(maxWidth: .infinity)
+                        Text("\(employee.position.rawValue)")
+                            .font(.subheadline)
+                    }
+                    .font(.title.bold())
+                    //.frame(width: geometry.size.width, height: geometry.size.height)
                 }
-                .font(.title.bold())
+                //.frame(width: .infinity, height: geometry.size.height)
+                .padding()
+                .blendMode(.destinationOut)
             }
-            .padding()
-            .blendMode(.destinationOut)
-            //.overlay(RoundedRectangle(cornerRadius: 20).fill(.gray).opacity(0.9))
-            .frame(maxWidth: .infinity)
+            //.frame(minHeight: geometry.size.height)
         }
+        .frame(minHeight: 200)
     }
 }
 
