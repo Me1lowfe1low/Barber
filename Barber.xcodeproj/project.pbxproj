@@ -14,6 +14,12 @@
 		51A6AFB7295DB54600E95D83 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB6295DB54600E95D83 /* Client.swift */; };
 		51A6AFB9295DC7A500E95D83 /* RegistrationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */; };
 		51A6AFBB295DC7FF00E95D83 /* ClientCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */; };
+		51B433B0296DD6F70035AB14 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433AF296DD6F70035AB14 /* ShopView.swift */; };
+		51B433B2296DD74E0035AB14 /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B1296DD74E0035AB14 /* ElementView.swift */; };
+		51B433B4296DD7820035AB14 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B3296DD7820035AB14 /* Element.swift */; };
+		51B433B6296DD80C0035AB14 /* ShopSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B5296DD80C0035AB14 /* ShopSection.swift */; };
+		51B433B8296DE4FD0035AB14 /* ElementPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B7296DE4FD0035AB14 /* ElementPreView.swift */; };
+		51B433BA296E95970035AB14 /* ShopSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B9296E95970035AB14 /* ShopSectionView.swift */; };
 		51F4FE462956FCC600721765 /* BarberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE452956FCC600721765 /* BarberApp.swift */; };
 		51F4FE482956FCC600721765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE472956FCC600721765 /* ContentView.swift */; };
 		51F4FE4A2956FCCF00721765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F4FE492956FCCF00721765 /* Assets.xcassets */; };
@@ -43,6 +49,12 @@
 		51A6AFB6295DB54600E95D83 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		51A6AFB8295DC7A500E95D83 /* RegistrationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationWindow.swift; sourceTree = "<group>"; };
 		51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCreator.swift; sourceTree = "<group>"; };
+		51B433AF296DD6F70035AB14 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		51B433B1296DD74E0035AB14 /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
+		51B433B3296DD7820035AB14 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		51B433B5296DD80C0035AB14 /* ShopSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSection.swift; sourceTree = "<group>"; };
+		51B433B7296DE4FD0035AB14 /* ElementPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementPreView.swift; sourceTree = "<group>"; };
+		51B433B9296E95970035AB14 /* ShopSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSectionView.swift; sourceTree = "<group>"; };
 		51F4FE422956FCC600721765 /* Barber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F4FE452956FCC600721765 /* BarberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberApp.swift; sourceTree = "<group>"; };
 		51F4FE472956FCC600721765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +137,8 @@
 		51F4FE5B2957208D00721765 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				51B433B3296DD7820035AB14 /* Element.swift */,
+				51B433B5296DD80C0035AB14 /* ShopSection.swift */,
 				51A6AFB6295DB54600E95D83 /* Client.swift */,
 				51A6AFB0295CD75C00E95D83 /* NewsModel.swift */,
 				51F4FE7B295C1F0000721765 /* InfoModel.swift */,
@@ -146,6 +160,10 @@
 				51A6AFB4295DB51700E95D83 /* ClientAccountView.swift */,
 				51F4FE5D2957220E00721765 /* CalendarWrapperView.swift */,
 				51A6AFB2295DAAC600E95D83 /* CellView.swift */,
+				51B433AF296DD6F70035AB14 /* ShopView.swift */,
+				51B433B9296E95970035AB14 /* ShopSectionView.swift */,
+				51B433B1296DD74E0035AB14 /* ElementView.swift */,
+				51B433B7296DE4FD0035AB14 /* ElementPreView.swift */,
 				51F4FE572957069600721765 /* CalendarView.swift */,
 				51F4FE75295B803800721765 /* EmployeeView.swift */,
 				51F4FE77295B876300721765 /* EmployeesView.swift */,
@@ -228,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51F4FE7A295C1EF000721765 /* InfoView.swift in Sources */,
+				51B433B2296DD74E0035AB14 /* ElementView.swift in Sources */,
 				51F4FE682958D35C00721765 /* CalendarViewExtension.swift in Sources */,
 				51F4FE582957069600721765 /* CalendarView.swift in Sources */,
 				51A6AFAF295CD74D00E95D83 /* NewsView.swift in Sources */,
@@ -236,15 +255,20 @@
 				51F4FE76295B803800721765 /* EmployeeView.swift in Sources */,
 				51F4FE6C2959E38500721765 /* HourView.swift in Sources */,
 				51F4FE482956FCC600721765 /* ContentView.swift in Sources */,
+				51B433BA296E95970035AB14 /* ShopSectionView.swift in Sources */,
 				51A6AFB1295CD75C00E95D83 /* NewsModel.swift in Sources */,
 				51F4FE6E295A3BA200721765 /* TimeValue.swift in Sources */,
 				51F4FE6A2959B31B00721765 /* DateView.swift in Sources */,
 				51A6AFB7295DB54600E95D83 /* Client.swift in Sources */,
 				51F4FE462956FCC600721765 /* BarberApp.swift in Sources */,
+				51B433B6296DD80C0035AB14 /* ShopSection.swift in Sources */,
 				51F4FE562957046400721765 /* Position.swift in Sources */,
 				51F4FE5A295706F100721765 /* Event.swift in Sources */,
 				51F4FE622957280400721765 /* DateFunctions.swift in Sources */,
 				51F4FE642958954500721765 /* DateValue.swift in Sources */,
+				51B433B8296DE4FD0035AB14 /* ElementPreView.swift in Sources */,
+				51B433B0296DD6F70035AB14 /* ShopView.swift in Sources */,
+				51B433B4296DD7820035AB14 /* Element.swift in Sources */,
 				51A6AFB5295DB51700E95D83 /* ClientAccountView.swift in Sources */,
 				51A6AFB3295DAAC600E95D83 /* CellView.swift in Sources */,
 				51F4FE7C295C1F0000721765 /* InfoModel.swift in Sources */,

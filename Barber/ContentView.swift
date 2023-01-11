@@ -29,25 +29,26 @@ struct ContentView: View {
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .interactive))
                 Divider()
-                HStack {
-                    NavigationLink(destination: CalendarWrapperView())
-                    {
-                        CellView(value:  "calendar")
+                Grid {
+                    GridRow {
+                        NavigationLink(destination: CalendarWrapperView())
+                        {
+                            CellView(value:  "calendar")
+                        }
+                        NavigationLink(destination: ShopView())
+                        {
+                            CellView(value: "takeoutbag.and.cup.and.straw")
+                        }
                     }
-                    NavigationLink(destination: Text("Shop"))
-                    {
-                        CellView(value: "takeoutbag.and.cup.and.straw")
-                    }
-                }
-                
-                HStack {
-                    NavigationLink(destination: EmployeesView())
-                    {
-                        CellView(value: "person.3")
-                    }
-                    NavigationLink(destination: InfoView())
-                    {
-                        CellView(value: "info.square")
+                    GridRow {
+                        NavigationLink(destination: EmployeesView())
+                        {
+                            CellView(value: "person.3")
+                        }
+                        NavigationLink(destination: InfoView())
+                        {
+                            CellView(value: "info.square")
+                        }
                     }
                 }
             }
@@ -56,7 +57,8 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     //Menu( content: {
                     NavigationLink(
-                        destination: Text("Hello"), //ClientAccountView(client: client),
+                        destination: Text("Hello"),
+                        //ClientAccountView(client: client),
                         label: {
                             Image(systemName: "person.crop.circle")
                         })
