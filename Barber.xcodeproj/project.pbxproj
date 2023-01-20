@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516839932979989C0043944B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 516839922979989C0043944B /* FirebaseFirestore */; };
+		516839952979989C0043944B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 516839942979989C0043944B /* FirebaseFirestoreSwift */; };
+		516839992979B8360043944B /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516839982979B8360043944B /* NewsListViewModel.swift */; };
 		51A6AFAF295CD74D00E95D83 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFAE295CD74D00E95D83 /* NewsView.swift */; };
 		51A6AFB1295CD75C00E95D83 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB0295CD75C00E95D83 /* NewsModel.swift */; };
 		51A6AFB3295DAAC600E95D83 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6AFB2295DAAC600E95D83 /* CellView.swift */; };
@@ -20,6 +23,9 @@
 		51B433B6296DD80C0035AB14 /* ShopSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B5296DD80C0035AB14 /* ShopSection.swift */; };
 		51B433B8296DE4FD0035AB14 /* ElementPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B7296DE4FD0035AB14 /* ElementPreView.swift */; };
 		51B433BA296E95970035AB14 /* ShopSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B433B9296E95970035AB14 /* ShopSectionView.swift */; };
+		51D41504297AA510001D367B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51D41503297AA510001D367B /* GoogleService-Info.plist */; };
+		51D41507297AADE5001D367B /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D41506297AADE5001D367B /* NewsRepository.swift */; };
+		51D41509297AB08C001D367B /* NewsPieceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D41508297AB08C001D367B /* NewsPieceViewModel.swift */; };
 		51F4FE462956FCC600721765 /* BarberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE452956FCC600721765 /* BarberApp.swift */; };
 		51F4FE482956FCC600721765 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4FE472956FCC600721765 /* ContentView.swift */; };
 		51F4FE4A2956FCCF00721765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F4FE492956FCCF00721765 /* Assets.xcassets */; };
@@ -42,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		516839982979B8360043944B /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		51A6AFAE295CD74D00E95D83 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		51A6AFB0295CD75C00E95D83 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		51A6AFB2295DAAC600E95D83 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -55,6 +62,9 @@
 		51B433B5296DD80C0035AB14 /* ShopSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSection.swift; sourceTree = "<group>"; };
 		51B433B7296DE4FD0035AB14 /* ElementPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementPreView.swift; sourceTree = "<group>"; };
 		51B433B9296E95970035AB14 /* ShopSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSectionView.swift; sourceTree = "<group>"; };
+		51D41503297AA510001D367B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51D41506297AADE5001D367B /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
+		51D41508297AB08C001D367B /* NewsPieceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPieceViewModel.swift; sourceTree = "<group>"; };
 		51F4FE422956FCC600721765 /* Barber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F4FE452956FCC600721765 /* BarberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarberApp.swift; sourceTree = "<group>"; };
 		51F4FE472956FCC600721765 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516839932979989C0043944B /* FirebaseFirestore in Frameworks */,
+				516839952979989C0043944B /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +104,18 @@
 			isa = PBXGroup;
 			children = (
 				51A6AFBA295DC7FF00E95D83 /* ClientCreator.swift */,
+				516839982979B8360043944B /* NewsListViewModel.swift */,
+				51D41508297AB08C001D367B /* NewsPieceViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		51D41505297AADD3001D367B /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				51D41506297AADE5001D367B /* NewsRepository.swift */,
+			);
+			path = Repo;
 			sourceTree = "<group>";
 		};
 		51F4FE392956FCC600721765 = {
@@ -117,6 +139,8 @@
 			children = (
 				51F4FE452956FCC600721765 /* BarberApp.swift */,
 				51F4FE472956FCC600721765 /* ContentView.swift */,
+				51D41503297AA510001D367B /* GoogleService-Info.plist */,
+				51D41505297AADD3001D367B /* Repo */,
 				51A6AFBC295DE25500E95D83 /* ViewModel */,
 				51F4FE5C2957209700721765 /* View */,
 				51F4FE5B2957208D00721765 /* Model */,
@@ -191,6 +215,10 @@
 			dependencies = (
 			);
 			name = Barber;
+			packageProductDependencies = (
+				516839922979989C0043944B /* FirebaseFirestore */,
+				516839942979989C0043944B /* FirebaseFirestoreSwift */,
+			);
 			productName = Barber;
 			productReference = 51F4FE422956FCC600721765 /* Barber.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 51F4FE392956FCC600721765;
+			packageReferences = (
+				516839912979989C0043944B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 51F4FE432956FCC600721765 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +266,7 @@
 			files = (
 				51F4FE4D2956FCCF00721765 /* Preview Assets.xcassets in Resources */,
 				51F4FE4A2956FCCF00721765 /* Assets.xcassets in Resources */,
+				51D41504297AA510001D367B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +279,7 @@
 			files = (
 				51F4FE7A295C1EF000721765 /* InfoView.swift in Sources */,
 				51B433B2296DD74E0035AB14 /* ElementView.swift in Sources */,
+				51D41509297AB08C001D367B /* NewsPieceViewModel.swift in Sources */,
 				51F4FE682958D35C00721765 /* CalendarViewExtension.swift in Sources */,
 				51F4FE582957069600721765 /* CalendarView.swift in Sources */,
 				51A6AFAF295CD74D00E95D83 /* NewsView.swift in Sources */,
@@ -255,6 +288,7 @@
 				51F4FE76295B803800721765 /* EmployeeView.swift in Sources */,
 				51F4FE6C2959E38500721765 /* HourView.swift in Sources */,
 				51F4FE482956FCC600721765 /* ContentView.swift in Sources */,
+				516839992979B8360043944B /* NewsListViewModel.swift in Sources */,
 				51B433BA296E95970035AB14 /* ShopSectionView.swift in Sources */,
 				51A6AFB1295CD75C00E95D83 /* NewsModel.swift in Sources */,
 				51F4FE6E295A3BA200721765 /* TimeValue.swift in Sources */,
@@ -272,6 +306,7 @@
 				51A6AFB5295DB51700E95D83 /* ClientAccountView.swift in Sources */,
 				51A6AFB3295DAAC600E95D83 /* CellView.swift in Sources */,
 				51F4FE7C295C1F0000721765 /* InfoModel.swift in Sources */,
+				51D41507297AADE5001D367B /* NewsRepository.swift in Sources */,
 				51F4FE54295703D400721765 /* Employee.swift in Sources */,
 				51A6AFB9295DC7A500E95D83 /* RegistrationWindow.swift in Sources */,
 				51F4FE5E2957220E00721765 /* CalendarWrapperView.swift in Sources */,
@@ -475,6 +510,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		516839912979989C0043944B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		516839922979989C0043944B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 516839912979989C0043944B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		516839942979989C0043944B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 516839912979989C0043944B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51F4FE3A2956FCC600721765 /* Project object */;
 }

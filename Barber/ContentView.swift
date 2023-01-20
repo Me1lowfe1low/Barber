@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var newsPageIndex = 0
-    @State private var news: [NewsModel] = NewsModel.bunchOfNews
+    @State var newsPageIndex = 0
     @State var logginStatus: Bool = false
-    @State var client: Client? = nil
+    //@ObservedObject var newsRepo: NewsListViewModel = NewsListViewModel()
+    @EnvironmentObject var newsRepo: NewsListViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                //CalendarWrapperView()
                 TabView(selection: $newsPageIndex) {
-                    ForEach(news) { news in
-                        VStack {
-                            NewsView(news: news)
+                    if newsRepo.newsList.isEmpty {
+                        Spacer()
+                    } else {
+                        ForEach(newsRepo.newsList, id: \.self) { newsPiece in
+                            VStack {
+                                NewsView(news: newsPiece)
+                            }
+                            .tag(newsPiece)
                         }
-                        .tag(news.tag)
                     }
                 }
                 .animation(.easeOut, value: newsPageIndex)
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+                
                 Divider()
                 Grid {
                     GridRow {
@@ -74,8 +78,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        //NavigationView {
+        NavigationView {
             ContentView()
-        //}
+        }
     }
 }

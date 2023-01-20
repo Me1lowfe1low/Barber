@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct NewsView: View {
-    var news: NewsModel
+    //var news: NewsModel
+    var news: NewsPieceViewModel
     
     var body: some View {
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 40).fill(LinearGradient(colors: [.green,.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
-                Image(systemName:news.imageURL)
+                Image(systemName:news.news.imageURL)
                     .resizable()
                     .scaledToFit()
                     .padding()
                     .blendMode(.destinationOut)
             }
-            Text("\(news.description)")
+            Text("\(news.news.description)")
             
         }
         .padding()
@@ -29,6 +30,7 @@ struct NewsView: View {
 
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsView(news: NewsModel.pieceOfNews)
+        let newsPiece = NewsModel.pieceOfNews
+        NewsView(news: NewsPieceViewModel(news: newsPiece))
     }
 }
