@@ -5,6 +5,7 @@
 //  Created by Дмитрий Гордиенко on 24.12.2022.
 //
 
+import SwiftUI;
 import Foundation
 
 extension Date {
@@ -27,5 +28,22 @@ extension Date {
             codeOfTheWeekday -= 1
         }
         return codeOfTheWeekday
+    }
+    
+    func getAllHours() -> [Date] {
+        let calendar = Calendar.current
+        let startHour = calendar.date(from: Calendar.current.dateComponents([.hour], from: self))!
+        let range = calendar.range(of: .hour, in: .day, for: self)!
+        
+        return range.compactMap { time -> Date in
+            return calendar.date(bySetting: .hour, value: time, of: startHour)!
+        }
+    }
+}
+
+
+struct Function_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

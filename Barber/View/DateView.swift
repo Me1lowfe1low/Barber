@@ -14,8 +14,12 @@ struct DateView: View {
         VStack {
             if value.day != 0 {
                 Text("\(value.day)")
+                    .font(.title3.bold())
+                    //.padding(.vertical)
             }
         }
+        .frame(alignment: .top)
+        
     }
 }
 

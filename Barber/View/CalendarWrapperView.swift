@@ -21,6 +21,8 @@ struct CalendarWrapperView: View {
 
 struct CalendarWrapperView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            ContentView()
+        }
     }
 }
